@@ -16,7 +16,12 @@ def f(t, y):
     return 1 - t + 4 * y
 
 
-NUMBER_OF_STEPS = 10
+def f1(t, y):
+    return
+
+
+NUMBER_OF_STEPS = 1000
+
 y = np.zeros(NUMBER_OF_STEPS)
 t = np.zeros(NUMBER_OF_STEPS)
 

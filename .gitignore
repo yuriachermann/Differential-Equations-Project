@@ -1,0 +1,4 @@
+#All PDF, DOC and Excel files
+*.pdf
+*.doc
+*.xlsx
