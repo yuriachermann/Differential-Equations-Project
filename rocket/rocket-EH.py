@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-
+Method: Euler-Heun
 """
 
 import numpy as np
 import matplotlib.pylab as plt
-# from matplotlib.tests.test_animation import NullMovieWriter
 
 dm = 1.25
 vex = 5
@@ -17,10 +16,6 @@ grav = g0 * r ** 2
 
 def m(t):
     return 5 - dm * t
-
-
-def exact(t):
-    return t / 4. - 3. / 16. + 19. * np.exp(4 * t) / 16.
 
 
 def fx(t, x, v):
@@ -55,8 +50,12 @@ for n in range(1, NUMBER_OF_STEPS):
 
 plt.subplot(211)
 plt.plot(t, x)
+plt.ylabel('x(m)', rotation=0)
+plt.grid()
 plt.subplot(212)
 plt.plot(t, v)
+plt.ylabel('v(m/s)', rotation=0)
+plt.grid()
 
 
 # plt.plot(t, v, "o", t, exact(t))
